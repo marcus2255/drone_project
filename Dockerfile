@@ -12,9 +12,9 @@ RUN apt-get update \
         git \
         gnupg \
         iputils-ping \
-        python3 \
+        python3.12 \
         python3-pip \
-        python3-venv \
+        python3.12-venv \
         software-properties-common \
         unzip \
         wget \
