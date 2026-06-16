@@ -1,0 +1,20 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: drone_project_dev
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+      - npm_cache:/home/vscode/.npm
+      - pip_cache:/home/vscode/.cache/pip
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: sleep infinity
+
+volumes:
+  node_modules:
+  npm_cache:
+  pip_cache:
